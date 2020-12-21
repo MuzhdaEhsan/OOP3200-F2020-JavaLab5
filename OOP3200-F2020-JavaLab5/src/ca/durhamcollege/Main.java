@@ -1,8 +1,15 @@
+/**
+ * @author: Muzhda Ehsan
+ * @date: 2020-Dec-18
+ * @program: BMI Calculator
+ */
+
 package ca.durhamcollege;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -95,12 +102,15 @@ public class Main extends Application
 
         // set font size
         gridPane.setStyle("-fx-font: 20 arial;");
+        gridPane.setVgap(10);
+        gridPane.setHgap(10);
+        gridPane.setPadding(new Insets(10));
 
         gridPane.add(vBoxHeight, 0, 0);
         gridPane.add(verifyTable, 0, 2);
         //gridPane.add(hBox2, 0, 3);
 
-        Scene scene = new Scene(gridPane, 500, 480);
+        Scene scene = new Scene(gridPane, 350, 480);
 
         primaryStage.setScene(scene);
 
